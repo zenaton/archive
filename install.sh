@@ -45,7 +45,7 @@ run_it() {
         if [ "$LINUX_TYPE" = "debian" ]; then
             # Debian kernel platform
             PLATFORM="debian"
-        elif [ "$LINUX_TYPE" = "centos" -o "$LINUX_TYPE" = '"centos rhel fedora"' ]; then
+        elif [ "$LINUX_TYPE" = "centos" -o "$LINUX_TYPE" = '"centos rhel fedora"' -o "$LINUX_TYPE" = '"rhel fedora"' ]; then
             # Centos kernel platform
             PLATFORM="centos"
         else
