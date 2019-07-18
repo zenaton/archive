@@ -42,7 +42,7 @@ run_it() {
             *) LINUX_TYPE=$(grep -E '^ID_LIKE=' /etc/os-release | cut -d= -f2) ;;
         esac
 
-        if [ "$LINUX_TYPE" = "debian" ]; then
+        if [ "$LINUX_TYPE" = "debian" -o "$LINUX_TYPE" = "arch" ]; then
             # Debian kernel platform
             PLATFORM="debian"
         elif [ "$LINUX_TYPE" = "centos" -o "$LINUX_TYPE" = '"centos rhel fedora"' -o "$LINUX_TYPE" = '"rhel fedora"' ]; then
